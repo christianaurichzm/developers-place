@@ -17,6 +17,7 @@
 		<java.version>1.8</java.version>
 		<kotlin.version>1.5.31</kotlin.version>
 		<querydsl.version>4.1.3</querydsl.version>
+		<graphql-java-kickstart.version>8.0.0</graphql-java-kickstart.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -67,11 +68,21 @@
 			<version>${querydsl.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
 			<version>${querydsl.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>${graphql-java-kickstart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphiql-spring-boot-starter</artifactId>
+			<version>${graphql-java-kickstart.version}</version>
 		</dependency>
 	</dependencies>
 
