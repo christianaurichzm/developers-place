@@ -8,7 +8,7 @@ input DeveloperInput {
 }
 
 input DeveloperQueryInput {
-    name: String!
+    name: String
 }
 
 extend type Query {
