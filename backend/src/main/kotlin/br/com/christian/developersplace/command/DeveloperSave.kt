@@ -11,11 +11,11 @@ class DeveloperSave(private val dao: DAO) {
 
     fun execute(input: DeveloperInput): Developer {
         val developer = input.id?.let {
-            this.dao.getReference<Developer>(input.id)
+            this.dao.getReference<Developer>(it)
         } ?: Developer()
 
         input.name?.let {
-            developer.name = input.name
+            developer.name = it
         }
 
         this.dao.persist(developer)
