@@ -4,6 +4,7 @@ type Developer {
 }
 
 input DeveloperInput {
+    id: ID
     name: String!
 }
 

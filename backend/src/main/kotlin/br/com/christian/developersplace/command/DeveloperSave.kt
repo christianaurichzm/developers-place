@@ -9,9 +9,16 @@ import org.springframework.stereotype.Repository
 class DeveloperSave(private val dao: DAO) {
 
     fun execute(input: DeveloperInput): Developer {
-        val developer = Developer()
-        developer.name = input.name
+        val developer = input.id?.let {
+            this.dao.getReference(Developer::class.java, input.id)
+        } ?: Developer()
+
+        input.name?.let {
+            developer.name = input.name
+        }
+
         this.dao.persist(developer)
+        
         return developer
     }
 }

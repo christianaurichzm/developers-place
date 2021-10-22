@@ -19,6 +19,10 @@ class DAO {
         this.em.persist(entity)
     }
 
+    fun <E> getReference(clazz: Class<E>, id: Any): E {
+        return this.em.getReference(clazz, id)
+    }
+
     fun queryFactory(): JPAQueryFactory {
         return JPAQueryFactory(this.em)
     }
