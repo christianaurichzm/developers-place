@@ -10,3 +10,12 @@ input DeveloperInput {
 input DeveloperQueryInput {
     name: String!
 }
+
+extend type Query {
+    developers(input: DeveloperQueryInput): [Developer]
+}
+
+extend type Mutation {
+    saveDeveloper(input: DeveloperInput): Developer
+}
+
