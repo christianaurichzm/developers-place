@@ -6,3 +6,7 @@ type Developer {
 input DeveloperInput {
     name: String!
 }
+
+input DeveloperQueryInput {
+    name: String!
+}

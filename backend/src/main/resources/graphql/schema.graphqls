@@ -1,5 +1,5 @@
 type Query {
-    developers: [Developer]
+    developers(input: DeveloperQueryInput): [Developer]
 }
 
 type Mutation {
