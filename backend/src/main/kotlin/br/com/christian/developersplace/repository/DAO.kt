@@ -9,10 +9,17 @@ import javax.persistence.PersistenceContext
 class DAO {
 
     @PersistenceContext
-    private lateinit var entityManager: EntityManager
+    private lateinit var em: EntityManager
 
-    fun queryFactory(): JPAQueryFactory {
-        return JPAQueryFactory(entityManager)
+    fun <E> find(clazz: Class<E>, id: Any): E {
+        return this.em.find(clazz, id)
     }
 
+    fun persist(entity: Any) {
+        this.em.persist(entity)
+    }
+
+    fun queryFactory(): JPAQueryFactory {
+        return JPAQueryFactory(this.em)
+    }
 }
