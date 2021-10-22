@@ -1,3 +1,7 @@
 type Query {
     developers: [Developer]
 }
+
+type Mutation {
+    saveDeveloper(input: DeveloperInput): Developer
+}

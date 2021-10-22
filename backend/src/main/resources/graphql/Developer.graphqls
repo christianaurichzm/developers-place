@@ -1,4 +1,8 @@
 type Developer {
     id: ID!
-    name: String
+    name: String!
+}
+
+input DeveloperInput {
+    name: String!
 }

@@ -1,7 +1,7 @@
-package br.com.christian.developersplace.resolver
+package br.com.christian.developersplace.graphql.resolver
 
-import br.com.christian.developersplace.service.DeveloperService
 import br.com.christian.developersplace.model.Developer
+import br.com.christian.developersplace.service.DeveloperService
 import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
@@ -15,5 +15,4 @@ class DeveloperQueryResolver : GraphQLQueryResolver {
     fun developers(): List<Developer> {
         return developerService.getDevelopers()
     }
-
 }
